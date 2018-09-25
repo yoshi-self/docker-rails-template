@@ -1,0 +1,16 @@
+FROM ruby:2.5.1-alpine
+
+RUN apk add --update --no-cache --virtual=build-dependencies \
+      build-base \
+      mariadb-dev && \
+    apk add --update --no-cache \
+      libxml2-dev libxslt-dev libstdc++ tzdata \
+      mariadb-client-libs sqlite-dev nodejs ca-certificates
+
+WORKDIR /gemfile
+COPY Gemfile Gemfile
+COPY Gemfile.lock Gemfile.lock
+RUN bundle install
+
+WORKDIR /app
+COPY . .
