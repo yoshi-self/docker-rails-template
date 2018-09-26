@@ -5,7 +5,7 @@ RUN apk add --update --no-cache --virtual=build-dependencies \
       mariadb-dev && \
     apk add --update --no-cache \
       libxml2-dev libxslt-dev libstdc++ tzdata \
-      mariadb-client-libs sqlite-dev nodejs ca-certificates
+      mariadb-client-libs nodejs yarn ca-certificates
 
 WORKDIR /gemfile
 COPY Gemfile Gemfile
