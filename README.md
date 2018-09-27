@@ -3,9 +3,10 @@ Rails + MySQL environment settings for development.
 
 ## Usage
 1. Copy this repository to project directory.  
-2. Create and edit .env file
+2. Create and edit env file
 ```
-cp .env.sample .env
+cp common.env.sample common.env
+# and edit
 ```
 3. Build.
 ```
