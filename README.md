@@ -16,8 +16,8 @@ docker-compose build
 ```
 docker-compose run --rm app rails new . --force --database=mysql --skip-bundle
 ```
-with [Webpacker](https://github.com/rails/webpacker) & React
 ```
+# with Webpacker & React
 docker-compose run --rm app rails new . --force --database=mysql --skip-bundle --webpack=react 
 ```
 5. Edit app/config/database.yml.
