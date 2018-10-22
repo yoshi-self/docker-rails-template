@@ -22,7 +22,7 @@ docker-compose run --rm app rails new . --force --database=mysql --skip-bundle -
 ```
 5. Edit app/config/database.yml.
 ```
-password: <%= ENV.fetch("MYSQL_PASSWORD") %>
+password: <%= ENV.fetch("MYSQL_ROOT_PASSWORD") %>
 host: db
 # and other settings like charset
 ```
